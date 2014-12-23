@@ -42,7 +42,7 @@ function compileTS (module) {
   var tmpDir = path.join(process.cwd(), "tmp", "tsreq");
   var jsname = path.join(
       tmpDir,
-      path.relative(process.cwd(), path.dirname(module.filename)),
+      //path.relative(process.cwd(), path.dirname(module.filename)),
       path.basename(module.filename, ".ts") + ".js");
 
   if (!isModified(module.filename, jsname)) {
