@@ -110,7 +110,10 @@ function runJS (jsname, module) {
 function merge(a, b) {
   if (a && b) {
     for (var key in b) {
-      a[key] = b[key];
+      try {
+        a[key] = b[key];
+      } catch(e) {
+      }
     }
   }
   return a;
